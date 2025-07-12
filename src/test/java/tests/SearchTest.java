@@ -2,11 +2,15 @@ package tests;
 
 import base.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import pages.LandingPage;
 import pages.SearchResultsPage;
 
 public class SearchTest extends BaseTest {
+
+
 
     @Test
     public void verifyProductSearch() {
@@ -18,4 +22,3 @@ public class SearchTest extends BaseTest {
         Assert.assertTrue(header.toLowerCase().contains("jacket"), "Search result header does not contain keyword");
     }
 }
-
